@@ -1,0 +1,16 @@
+name: ci-go-workflow
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  check-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Go 1.21.x
+        uses: actions/setup-go@v4o
+        with:
+          go-version: '1.21.x'
+      - run: go test
