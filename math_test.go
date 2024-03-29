@@ -8,4 +8,8 @@ func TestSum(t *testing.T) {
 	if total != 30 {
 		t.Errorf("Resultado da soma é inválido: Resultado %f. Esperado: %f", total, 30.0)
 	}
+
+	if sum(10, 10) != 20 {
+		t.Errorf("Resultado da soma é inválido")
+	}
 }
